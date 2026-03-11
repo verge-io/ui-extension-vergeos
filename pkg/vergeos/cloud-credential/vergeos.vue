@@ -73,33 +73,14 @@ export default {
         return false;
       }
 
-      try {
-        const host = this.host.replace(/\/+$/, '');
-        const url = `/meta/proxy/${ host }/api/v4/vms?rows=1`;
-
-        await this.$store.dispatch('management/request', {
-          url,
-          headers: {
-            Accept:              'application/json',
-            'X-API-Auth-Header': `Bearer ${ this.apiKey }`,
-          },
-          method:               'GET',
-          redirectUnauthorized: false,
-        });
-
-        // Store host in annotations for machine-config to read
-        if (!this.value.annotations) {
-          this.value.annotations = {};
-        }
-        this.value.annotations['vergeos.io/host'] = this.host;
-        this.value.annotations['vergeos.io/insecure'] = String(this.insecure);
-
-        return true;
-      } catch (e) {
-        this.error = e?.message || this.t('machine.vergeos.credentialError');
-
-        return false;
+      // Store host in annotations for machine-config to read
+      if (!this.value.annotations) {
+        this.value.annotations = {};
       }
+      this.value.annotations['vergeos.io/host'] = this.host;
+      this.value.annotations['vergeos.io/insecure'] = String(this.insecure);
+
+      return true;
     },
   },
 
