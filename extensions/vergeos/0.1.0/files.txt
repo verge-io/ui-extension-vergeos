@@ -1,0 +1,14 @@
+plugin/img/vergeos.df8ceb23.svg
+plugin/package.json
+plugin/vergeos-0.1.0.umd.min.37.js
+plugin/vergeos-0.1.0.umd.min.37.js.map
+plugin/vergeos-0.1.0.umd.min.81.js
+plugin/vergeos-0.1.0.umd.min.81.js.map
+plugin/vergeos-0.1.0.umd.min.918.js
+plugin/vergeos-0.1.0.umd.min.918.js.map
+plugin/vergeos-0.1.0.umd.min.cloud-credential.js
+plugin/vergeos-0.1.0.umd.min.cloud-credential.js.map
+plugin/vergeos-0.1.0.umd.min.js
+plugin/vergeos-0.1.0.umd.min.js.map
+plugin/vergeos-0.1.0.umd.min.machine-config.js
+plugin/vergeos-0.1.0.umd.min.machine-config.js.map
