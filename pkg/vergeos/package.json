@@ -1,0 +1,27 @@
+{
+  "name": "vergeos",
+  "description": "VergeOS Node Driver UI for Rancher",
+  "version": "0.1.0",
+  "private": false,
+  "rancher": {
+    "annotations": {
+      "catalog.cattle.io/display-name": "VergeOS Node Driver",
+      "catalog.cattle.io/kube-version": ">= 1.16.0-0",
+      "catalog.cattle.io/rancher-version": ">= 2.10.0-0",
+      "catalog.cattle.io/ui-extensions-version": ">= 3.0.0 < 4.0.0"
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "@vue/cli-plugin-typescript": "~5.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
