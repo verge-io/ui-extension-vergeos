@@ -80,8 +80,8 @@ export default {
         await this.$store.dispatch('management/request', {
           url,
           headers: {
-            Accept:        'application/json',
-            Authorization: `Bearer ${ this.apiKey }`,
+            Accept:              'application/json',
+            'X-API-Auth-Header': `Bearer ${ this.apiKey }`,
           },
           method:               'GET',
           redirectUnauthorized: false,

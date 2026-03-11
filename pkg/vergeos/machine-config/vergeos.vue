@@ -77,10 +77,9 @@ export default {
       });
 
       this.host = this.credential?.annotations?.['vergeos.io/host'] || '';
-      this.apiKey = this.credential?.decodedData?.apiKey || '';
 
-      if (!this.host || !this.apiKey) {
-        this.errors.push('Cloud credential is missing host or API key');
+      if (!this.host) {
+        this.errors.push('Cloud credential is missing host');
 
         return;
       }
@@ -125,9 +124,9 @@ export default {
       return this.$store.dispatch('management/request', {
         url:     `/meta/proxy/${ host }${ path }`,
         headers: {
-          Accept:        'application/json',
-          Authorization: `Bearer ${ this.apiKey }`,
-          'X-JSON-Non-Compact': '1',
+          Accept:                    'application/json',
+          'X-API-CattleAuth-Header': `Bearer credID=${ this.credentialId } passwordField=apiKey`,
+          'X-JSON-Non-Compact':      '1',
         },
         method:               'GET',
         redirectUnauthorized: false,
