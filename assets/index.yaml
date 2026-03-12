@@ -14,12 +14,12 @@ entries:
       catalog.cattle.io/ui-extensions-version: '>= 3.0.0 < 4.0.0'
     apiVersion: v2
     appVersion: 0.1.0
-    created: "2026-03-11T18:10:00.112929-04:00"
+    created: "2026-03-12T12:29:56.085626-04:00"
     description: VergeOS Node Driver UI for Rancher
-    digest: 6d5f3a8a6c2136b45b64a8f3392886dede5c684dfc08e3b8f0cdcb6e5d1b0dec
+    digest: db6f4f90797934c34e47ebf741b05e78ad9eaa12734063b351cc2cd25c5ed891
     name: vergeos
     type: application
     urls:
     - assets/vergeos/vergeos-0.1.0.tgz
     version: 0.1.0
-generated: "2026-03-11T18:10:00.112454-04:00"
+generated: "2026-03-12T12:29:56.084799-04:00"
