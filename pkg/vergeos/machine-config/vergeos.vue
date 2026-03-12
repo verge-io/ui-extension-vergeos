@@ -43,19 +43,19 @@ export default {
   methods: {
     initDefaults() {
       if (!this.value.cpuCores) {
-        this.value.cpuCores = 2;
+        this.value.cpuCores = '2';
       }
       if (!this.value.ram) {
-        this.value.ram = 4096;
+        this.value.ram = '4096';
       }
       if (this.value.diskSize === undefined || this.value.diskSize === null) {
-        this.value.diskSize = 0;
+        this.value.diskSize = '0';
       }
       if (!this.value.sshUser) {
         this.value.sshUser = 'ubuntu';
       }
       if (!this.value.sshPort) {
-        this.value.sshPort = 22;
+        this.value.sshPort = '22';
       }
     },
   },
@@ -91,7 +91,7 @@ export default {
     <div class="row mt-20">
       <div class="col span-4">
         <LabeledInput
-          v-model:value.number="value.cpuCores"
+          v-model:value="value.cpuCores"
           :label="t('machine.vergeos.cpuCores.label')"
           :mode="mode"
           :disabled="disabled"
@@ -102,7 +102,7 @@ export default {
       </div>
       <div class="col span-4">
         <LabeledInput
-          v-model:value.number="value.ram"
+          v-model:value="value.ram"
           :label="t('machine.vergeos.ram.label')"
           :mode="mode"
           :disabled="disabled"
@@ -112,7 +112,7 @@ export default {
       </div>
       <div class="col span-4">
         <LabeledInput
-          v-model:value.number="value.diskSize"
+          v-model:value="value.diskSize"
           :label="t('machine.vergeos.diskSize.label')"
           :mode="mode"
           :disabled="disabled"
@@ -150,7 +150,7 @@ export default {
       </div>
       <div class="col span-6">
         <LabeledInput
-          v-model:value.number="value.sshPort"
+          v-model:value="value.sshPort"
           :label="t('machine.vergeos.sshPort.label')"
           :mode="mode"
           :disabled="disabled"
