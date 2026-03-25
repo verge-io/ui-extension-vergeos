@@ -29,9 +29,9 @@ machine:
     diskSize:
       label: "Disk Size (GB)"
       help: "0 = no resize"
-    userdata:
-      label: "User Data"
-      placeholder: "Cloud-init user-data (file path or inline cloud-config)"
+    cloudinit:
+      label: "Cloud Init"
+      placeholder: "Optional cloud-init cloud-config (YAML)"
     sshUser:
       label: "SSH User"
     sshPort:
