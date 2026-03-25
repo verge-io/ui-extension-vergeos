@@ -128,12 +128,13 @@ export default {
     <div class="row mt-20">
       <div class="col span-12">
         <LabeledInput
-          v-model:value="value.userdata"
-          :label="t('machine.vergeos.userdata.label')"
-          :placeholder="t('machine.vergeos.userdata.placeholder')"
+          :value="value.cloudinit"
+          :label="t('machine.vergeos.cloudinit.label')"
+          :placeholder="t('machine.vergeos.cloudinit.placeholder')"
           :mode="mode"
           :disabled="disabled"
           type="multiline"
+          @update:value="value.cloudinit = $event"
         />
       </div>
     </div>
